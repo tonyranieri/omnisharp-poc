@@ -1,0 +1,62 @@
+Starting OmniSharp server at 4/25/2019, 3:46:56 PM
+    Target: c:\source\poc\omnisharp-issue
+
+OmniSharp server started.
+    Path: C:\Users\ranieria\.vscode\extensions\ms-vscode.csharp-1.19.0\.omnisharp\1.32.18\OmniSharp.exe
+    PID: 16740
+
+[info]: OmniSharp.Stdio.Host
+        Starting OmniSharp on Windows 6.2.9200.0 (x64)
+[info]: OmniSharp.Services.DotNetCliService
+        DotNetPath set to dotnet
+[info]: OmniSharp.MSBuild.Discovery.MSBuildLocator
+        Located 2 MSBuild instance(s)
+            1: Visual Studio Enterprise 2017 15.4.27004.2008 - "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin"
+            2: StandAlone 15.0 - "C:\Users\ranieria\.vscode\extensions\ms-vscode.csharp-1.19.0\.omnisharp\1.32.18\.msbuild\Current\Bin"
+[info]: OmniSharp.MSBuild.Discovery.MSBuildLocator
+        Registered MSBuild instance: Visual Studio Enterprise 2017 15.4.27004.2008 - "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin"
+[info]: OmniSharp.Cake.CakeProjectSystem
+        Detecting Cake files in 'c:\source\poc\omnisharp-issue'.
+[info]: OmniSharp.Cake.CakeProjectSystem
+        Could not find any Cake files
+[info]: OmniSharp.WorkspaceInitializer
+        Project system 'OmniSharp.DotNet.DotNetProjectSystem' is disabled in the configuration.
+[info]: OmniSharp.MSBuild.ProjectSystem
+        No solution files found in 'c:\source\poc\omnisharp-issue'
+[info]: OmniSharp.MSBuild.ProjectManager
+        Queue project update for 'c:\source\poc\omnisharp-issue\src\OmniSharpPoc\OmniSharpPoc.csproj'
+[info]: OmniSharp.Script.ScriptProjectSystem
+        Detecting CSX files in 'c:\source\poc\omnisharp-issue'.
+[info]: OmniSharp.Script.ScriptProjectSystem
+        Could not find any CSX files
+[info]: OmniSharp.WorkspaceInitializer
+        Invoking Workspace Options Provider: OmniSharp.Roslyn.CSharp.Services.CSharpWorkspaceOptionsProvider
+[info]: OmniSharp.MSBuild.ProjectManager
+        Loading project: c:\source\poc\omnisharp-issue\src\OmniSharpPoc\OmniSharpPoc.csproj
+[info]: OmniSharp.WorkspaceInitializer
+        Configuration finished.
+[info]: OmniSharp.Stdio.Host
+        Omnisharp server running using Stdio at location 'c:\source\poc\omnisharp-issue' on host 6292.
+[warn]: OmniSharp.MSBuild.ProjectManager
+        Failed to load project file 'c:\source\poc\omnisharp-issue\src\OmniSharpPoc\OmniSharpPoc.csproj'.
+c:\source\poc\omnisharp-issue\src\OmniSharpPoc\OmniSharpPoc.csproj(1,1)
+Microsoft.Build.Exceptions.InvalidProjectFileException: The SDK 'Microsoft.NET.Sdk.Web' specified could not be found.  c:\source\poc\omnisharp-issue\src\OmniSharpPoc\OmniSharpPoc.csproj
+   at Microsoft.Build.Shared.ProjectErrorUtilities.ThrowInvalidProject(String errorSubCategoryResourceName, IElementLocation elementLocation, String resourceName, Object[] args)
+   at Microsoft.Build.Evaluation.Evaluator`4.ExpandAndLoadImportsFromUnescapedImportExpressionConditioned(String directoryOfImportingFile, ProjectImportElement importElement, List`1& projects, Boolean throwOnFileNotExistsError)
+   at Microsoft.Build.Evaluation.Evaluator`4.ExpandAndLoadImports(String directoryOfImportingFile, ProjectImportElement importElement)
+   at Microsoft.Build.Evaluation.Evaluator`4.EvaluateImportElement(String directoryOfImportingFile, ProjectImportElement importElement)
+   at Microsoft.Build.Evaluation.Evaluator`4.PerformDepthFirstPass(ProjectRootElement currentProjectOrImport)
+   at Microsoft.Build.Evaluation.Evaluator`4.Evaluate(ILoggingService loggingService, BuildEventContext buildEventContext)
+   at Microsoft.Build.Evaluation.Project.Reevaluate(ILoggingService loggingServiceForEvaluation, ProjectLoadSettings loadSettings)
+   at Microsoft.Build.Evaluation.Project.ReevaluateIfNecessary(ILoggingService loggingServiceForEvaluation, ProjectLoadSettings loadSettings)
+   at Microsoft.Build.Evaluation.Project.Initialize(IDictionary`2 globalProperties, String toolsVersion, String subToolsetVersion, ProjectLoadSettings loadSettings)
+   at Microsoft.Build.Evaluation.Project..ctor(String projectFile, IDictionary`2 globalProperties, String toolsVersion, String subToolsetVersion, ProjectCollection projectCollection, ProjectLoadSettings loadSettings)
+   at Microsoft.Build.Evaluation.ProjectCollection.LoadProject(String fileName, IDictionary`2 globalProperties, String toolsVersion)
+   at OmniSharp.MSBuild.ProjectLoader.EvaluateProjectFileCore(String filePath) in C:\projects\omnisharp-roslyn\src\OmniSharp.MSBuild\ProjectLoader.cs:line 129
+   at OmniSharp.MSBuild.ProjectLoader.BuildProject(String filePath) in C:\projects\omnisharp-roslyn\src\OmniSharp.MSBuild\ProjectLoader.cs:line 72
+   at OmniSharp.MSBuild.ProjectFile.ProjectFileInfo.Load(String filePath, ProjectIdInfo projectIdInfo, ProjectLoader loader) in C:\projects\omnisharp-roslyn\src\OmniSharp.MSBuild\ProjectFile\ProjectFileInfo.cs:line 94
+   at OmniSharp.MSBuild.ProjectManager.<>c__DisplayClass31_0.<LoadProject>b__0() in C:\projects\omnisharp-roslyn\src\OmniSharp.MSBuild\ProjectManager.cs:line 295
+   at OmniSharp.MSBuild.ProjectManager.LoadOrReloadProject(String projectFilePath, Func`1 loader) in C:\projects\omnisharp-roslyn\src\OmniSharp.MSBuild\ProjectManager.cs:line 306
+
+[fail]: OmniSharp.MSBuild.ProjectManager
+        Attempted to update project that is not loaded: c:\source\poc\omnisharp-issue\src\OmniSharpPoc\OmniSharpPoc.csproj
